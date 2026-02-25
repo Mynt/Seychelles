@@ -3,11 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seychelles</title>
+    <title>Seychelles Exhibition</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <h1>Welcome to Seychelles</h1>
-    <p>This is a static HTML project.</p>
+    <header>
+        <h1>Seychelles Exhibition</h1>
+        <nav>
+            <button id="albumBtn">Album</button>
+            <button id="rollingBtn">Rolling Presentation</button>
+        </nav>
+    </header>
+    <main>
+        <section id="albumView" class="view"></section>
+        <section id="rollingView" class="view" style="display:none;">
+            <img id="rollingImage" src="" alt="Rolling Presentation" />
+            <div id="rollingCaption"></div>
+            <div class="rolling-controls">
+                <button id="prevBtn">Previous</button>
+                <button id="nextBtn">Next</button>
+                <button id="playPauseBtn">Play</button>
+            </div>
+        </section>
+        <!-- Modal for full-size image -->
+        <div id="modal" class="modal">
+            <span id="modalClose" class="modal-close">&times;</span>
+            <img id="modalImg" class="modal-content" src="" alt="Full Size" />
+        </div>
+    </main>
+    <script src="main.js"></script>
 </body>
 </html>
